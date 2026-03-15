@@ -3,12 +3,10 @@ const app = express();
 
 app.use(express.json());
 
-// Home route
 app.get("/", (req, res) => {
   res.send("TikTok Bot Running");
 });
 
-// Webhook route
 app.post("/webhook", (req, res) => {
 
   let comment = req.body.comment;
